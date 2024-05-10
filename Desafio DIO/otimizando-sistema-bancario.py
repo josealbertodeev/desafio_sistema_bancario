@@ -1,6 +1,5 @@
 import textwrap
 
-
 def menu():
     menu = """\n
     ================ MENU ================
@@ -14,7 +13,6 @@ def menu():
     => """
     return input(textwrap.dedent(menu))
 
-
 def depositar(saldo, valor, extrato, /):
     if valor > 0:
         saldo += valor
@@ -24,7 +22,6 @@ def depositar(saldo, valor, extrato, /):
         print("\n@@@ Operação falhou! O valor informado é inválido. @@@")
 
     return saldo, extrato
-
 
 def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
     excedeu_saldo = valor > saldo
@@ -155,6 +152,5 @@ def main():
 
         else:
             print("Operação inválida, por favor selecione novamente a operação desejada.")
-
 
 main()
